@@ -1,0 +1,204 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;;
+  background-color: #faf3ec;
+  font-family: "Lato", sans-serif;
+  color: black;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+    display: block;
+    color: white;
+    background-color: #f13b30;
+    padding: 20px
+}
+
+h1 {
+    margin: 0px
+}
+
+nav {
+    display: flex;
+    padding: 50px 0px;
+}
+
+.select {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 30%;
+    height: auto;
+    margin: 0px 4%
+}
+
+@media (max-width: 1000px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .select {
+        width: 70%
+    }
+}
+
+.navTitle {
+    font-size: 1.5em;
+    text-align: center
+}
+
+.filter-form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    background-color: 	#333333;
+    border-radius: 20px;
+}
+
+label {
+    padding: 10px
+}
+
+svg {
+    width: 2.5em;
+    height: 2.5em
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0
+}
+
+input[type="radio"] + span {
+    font-size: 2em;
+    font-weight: bold;
+    color: white
+}
+
+.a {
+    fill: white
+}
+
+#beerAll:checked + span,
+#beerAll:hover + span {
+    color: orange;
+    cursor: pointer
+}
+
+.beer:hover, 
+input[class="beerChoice"]:checked + svg {
+    fill: orange;
+    cursor: pointer
+}
+
+#hopsAll:checked + span,
+#hopsAll:hover + span {
+    color: lime;
+    cursor: pointer
+}
+
+.hops:hover, input[class="hopsChoice"]:checked + svg  {
+    fill: lime;
+    cursor: pointer
+}
+
+.page-btn {
+    font-size: 2em;
+    padding: 10px 0px;
+    background-color: transparent;
+    color: white;
+    border: none
+}
+
+.page-btn:disabled {
+    color: black
+}
+
+.page-btn:hover {
+    cursor: pointer
+}
+
+#beers_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+}
+
+.beer_card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    border: solid black 1px;
+    background-color: #e6d9cc;
+    box-shadow: 5px 5px;
+    margin-bottom: 10px;
+}
+
+.beerItem {
+    padding: 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.beer_img {
+    width: auto;
+    height: 300px
+}
+
+.beer_info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.beer_content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: absolute;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    top: 0px;
+    width: auto;
+    height: 450px;
+    color: white;
+    background-color: #f2544b;
+    overflow: auto;
+    opacity: 0;
+}
+
+.beer_content:hover {
+    opacity: 1
+}
+
+.beer_name {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.beer_tagline {
+    font-style: italic;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: solid 3px #333333;
+}
+
+.beer_description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.beer_foods {
+    font-size: 1rem;
+    font-style: italic;
+}
